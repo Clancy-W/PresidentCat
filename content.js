@@ -29,6 +29,8 @@ function walk(node)
 function handleText(textNode)
 {
 	var v = textNode.nodeValue;
+	
+	// A dictionary of words we want replaced, and what we want them replaced by.
   var di = {
     "Donald Trump": "Kitty Cat",
     "DONALD TRUMP": "Kitty CAT",
@@ -52,6 +54,7 @@ function handleText(textNode)
 }
 
 $( document ).ready(function() {
+	// The images we want to replace Trump
   imgs = [
     "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_960_720.jpg",
     "https://images.pexels.com/photos/104827/cat-pet-animal-domestic-104827.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
